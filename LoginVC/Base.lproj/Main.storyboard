@@ -40,7 +40,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <action selector="loginButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d21-S5-njX"/>
                                     <segue destination="WJ9-af-6Eu" kind="presentation" modalPresentationStyle="fullScreen" id="Pd9-dH-a1t"/>
                                 </connections>
                             </button>

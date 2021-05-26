@@ -25,17 +25,8 @@ class LoginViewController: UIViewController {
 
     }
 
-    
-    @IBAction func loginButtonTouched(_ sender: Any) {
-        
-        if userNameTextField.text == validUsername && passwordTextField.text == validPassword {
-            
-            print("Fuck Yeah!")
-
-        } else {
-            wrongUserData()
-        }
-        
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     private func userDataChecker() -> Bool {
@@ -44,7 +35,6 @@ class LoginViewController: UIViewController {
         } else {
             return false
         }
-        
     }
     
     
@@ -62,7 +52,7 @@ class LoginViewController: UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil )
         ac.addAction(okAction)
         self.present(ac, animated: true, completion: nil)
-
+        
     }
     
     private func forgotPasswordAlert() {
