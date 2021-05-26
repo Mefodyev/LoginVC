@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     let validUsername = "User"
     let validPassword = "Password"
@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loginButton.layer.cornerRadius = loginButton.frame.size.height/10
 
     }
 
@@ -87,12 +88,27 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let welcomeVC = segue.source as? WelcomeViewController else {
-            return
-        }
+//        guard let welcomeVC = segue.source as? WelcomeViewController else {
+//            return
+//        }
         
         userNameTextField.text = ""
         passwordTextField.text = ""
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField {
+            textField.resignFirstResponder()
+            textField.returnKeyType = .next
+            passwordTextField.becomeFirstResponder()
+        }
+        
+        if textField == passwordTextField {
+            textField.returnKeyType = .done
+            performSegue(withIdentifier: "toWelcomeVC", sender: nil)
+        }
+        
+        return true
     }
     
 }

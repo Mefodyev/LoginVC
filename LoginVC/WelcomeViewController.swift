@@ -20,6 +20,7 @@ class WelcomeViewController: UIViewController {
 
         setGradientToBackgroundView()
         helloUserLabel.text = "Welcome, \(username)!"
+        logoutButton.layer.cornerRadius = logoutButton.frame.size.height/10
         
     }
     
