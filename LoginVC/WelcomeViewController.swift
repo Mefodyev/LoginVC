@@ -10,7 +10,6 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     var username = ""
-    var password = ""
     
     @IBOutlet weak var helloUserLabel: UILabel!
     @IBOutlet weak var logoutButton: UIButton!
@@ -20,7 +19,7 @@ class WelcomeViewController: UIViewController {
 
         setGradientToBackgroundView()
         helloUserLabel.text = "Welcome, \(username)!"
-        logoutButton.layer.cornerRadius = logoutButton.frame.size.height/10
+        logoutButton.layer.cornerRadius = logoutButton.frame.size.height/2
         
     }
     

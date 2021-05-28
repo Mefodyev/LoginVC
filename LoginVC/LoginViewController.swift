@@ -22,8 +22,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loginButton.layer.cornerRadius = loginButton.frame.size.height/10
-
+        loginButton.layer.cornerRadius = loginButton.frame.size.height/2
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -31,11 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func userDataChecker() -> Bool {
-        if userNameTextField.text == validUsername && passwordTextField.text == validPassword {
-            return true
-        } else {
-            return false
-        }
+        userNameTextField.text == validUsername && passwordTextField.text == validPassword
     }
     
     
@@ -48,12 +43,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func forgotUsernameAlert() {
-        
         let ac = UIAlertController(title: "Oops!", message: "Your name is \(validUsername) 😉", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil )
         ac.addAction(okAction)
         self.present(ac, animated: true, completion: nil)
-        
     }
     
     private func forgotPasswordAlert() {
@@ -61,7 +54,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil )
         ac.addAction(okAction)
         self.present(ac, animated: true, completion: nil)
-
     }
     
     private func wrongUserData() {
@@ -71,7 +63,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.present(ac, animated: true, completion: nil)
         userNameTextField.text = ""
         passwordTextField.text = ""
-
     }
 
 
@@ -79,19 +70,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         guard userDataChecker() == true else {
             return wrongUserData()
         }
-        guard let destination = segue.destination as? WelcomeViewController else {
-            return
-        }
+        guard let destination = segue.destination as? WelcomeViewController else { return }
         destination.username = userNameTextField.text ?? ""
-        destination.password = passwordTextField.text ?? ""
-        
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-//        guard let welcomeVC = segue.source as? WelcomeViewController else {
-//            return
-//        }
-        
         userNameTextField.text = ""
         passwordTextField.text = ""
     }

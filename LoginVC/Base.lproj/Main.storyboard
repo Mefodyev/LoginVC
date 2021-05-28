@@ -42,7 +42,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4t-c1-Krz">
-                                <rect key="frame" x="174" y="278" width="66" height="42"/>
+                                <rect key="frame" x="57" y="278" width="300" height="42"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.078431372550000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Log In">
@@ -75,6 +75,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
+                            <constraint firstItem="q4t-c1-Krz" firstAttribute="width" secondItem="jcG-w3-LZQ" secondAttribute="width" id="939-ql-hVV"/>
                             <constraint firstItem="jcG-w3-LZQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="E7u-hG-NJk"/>
                             <constraint firstItem="Dn5-Dp-yUf" firstAttribute="top" secondItem="q4t-c1-Krz" secondAttribute="bottom" constant="20" id="WBn-tm-mOE"/>
                             <constraint firstItem="Dn5-Dp-yUf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c0N-uG-ZC3"/>
@@ -138,6 +139,7 @@
                             <constraint firstItem="qFu-lP-glh" firstAttribute="centerY" secondItem="91d-1r-wCr" secondAttribute="centerY" id="Gvs-R2-kPl"/>
                             <constraint firstItem="2RQ-kk-ltX" firstAttribute="centerX" secondItem="91d-1r-wCr" secondAttribute="centerX" id="MxM-mx-8kR"/>
                             <constraint firstItem="qFu-lP-glh" firstAttribute="top" secondItem="tnY-lP-nE1" secondAttribute="bottom" constant="24" id="U6q-I5-T9I"/>
+                            <constraint firstItem="tnY-lP-nE1" firstAttribute="width" secondItem="2RQ-kk-ltX" secondAttribute="width" multiplier="0.855769" id="VHd-N4-5tD"/>
                             <constraint firstItem="2RQ-kk-ltX" firstAttribute="top" secondItem="qFu-lP-glh" secondAttribute="bottom" constant="41" id="YHh-c6-RGJ"/>
                             <constraint firstItem="qFu-lP-glh" firstAttribute="centerX" secondItem="91d-1r-wCr" secondAttribute="centerX" id="hem-pa-37Y"/>
                         </constraints>
@@ -151,7 +153,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vve-9w-9Yf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="fiy-sI-J8x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="817.5" y="71.25"/>
+            <point key="canvasLocation" x="817.39130434782612" y="70.982142857142847"/>
         </scene>
     </scenes>
     <resources>
