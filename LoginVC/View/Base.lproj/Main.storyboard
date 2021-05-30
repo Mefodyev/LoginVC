@@ -356,11 +356,96 @@
                     <connections>
                         <segue destination="WJ9-af-6Eu" kind="relationship" relationship="viewControllers" id="eEK-bl-7Id"/>
                         <segue destination="ma5-r3-c2A" kind="relationship" relationship="viewControllers" id="5S7-9P-0OH"/>
+                        <segue destination="sTR-Lq-cJ2" kind="relationship" relationship="viewControllers" id="Slk-VS-eZt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRd-Kx-hTO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="817.39130434782612" y="70.982142857142847"/>
+        </scene>
+        <!--Contact Me ☎️-->
+        <scene sceneID="Gd1-Qk-5XL">
+            <objects>
+                <viewController id="sTR-Lq-cJ2" customClass="ContactsViewController" customModule="LoginVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xct-dY-49z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="bYE-0O-Hjc">
+                                <rect key="frame" x="20" y="184.5" width="374" height="264"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2C-wt-NCt">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="nPt-ui-cSb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Telegram">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="telegramButtonTapped:" destination="sTR-Lq-cJ2" eventType="touchUpInside" id="Ffz-Od-Daz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxc-8A-vcz">
+                                        <rect key="frame" x="0.0" y="102" width="374" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="cT4-z1-U82"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Instagram">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="instagramButtonTapped:" destination="sTR-Lq-cJ2" eventType="touchUpInside" id="5ct-i2-7mx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5im-Gp-saz">
+                                        <rect key="frame" x="0.0" y="204" width="374" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="8Fk-j9-Ucb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="HeadHunter">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hhButtonTapped:" destination="sTR-Lq-cJ2" eventType="touchUpInside" id="PFp-lL-hmn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Буду рад общению. Вы можете связаться со мной по следующим ссылкам:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghd-iz-Qpw">
+                                <rect key="frame" x="20" y="119" width="374" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h7O-Ni-YjY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ghd-iz-Qpw" firstAttribute="top" secondItem="h7O-Ni-YjY" secondAttribute="top" constant="75" id="YWN-89-MzK"/>
+                            <constraint firstItem="bYE-0O-Hjc" firstAttribute="top" secondItem="Ghd-iz-Qpw" secondAttribute="bottom" constant="20" id="but-18-B4a"/>
+                            <constraint firstItem="Ghd-iz-Qpw" firstAttribute="leading" secondItem="h7O-Ni-YjY" secondAttribute="leading" constant="20" id="exm-nq-Ila"/>
+                            <constraint firstItem="bYE-0O-Hjc" firstAttribute="leading" secondItem="h7O-Ni-YjY" secondAttribute="leading" constant="20" id="fjm-Ph-Xwl"/>
+                            <constraint firstItem="h7O-Ni-YjY" firstAttribute="trailing" secondItem="Ghd-iz-Qpw" secondAttribute="trailing" constant="20" id="pEu-K9-YjU"/>
+                            <constraint firstItem="h7O-Ni-YjY" firstAttribute="trailing" secondItem="bYE-0O-Hjc" secondAttribute="trailing" constant="20" id="xGa-gL-vwH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Contact Me ☎️" image="paperplane.fill" catalog="system" id="kay-n9-f3G"/>
+                    <connections>
+                        <outlet property="hhButton" destination="5im-Gp-saz" id="rnS-rL-WsS"/>
+                        <outlet property="instagramButton" destination="Rxc-8A-vcz" id="JYb-3G-mx8"/>
+                        <outlet property="telegramButton" destination="f2C-wt-NCt" id="ZiC-cq-khH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rKB-SF-5DB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988.4057971014495" y="-20.089285714285712"/>
         </scene>
         <!--About Me 🤗-->
         <scene sceneID="msJ-jC-BHj">
@@ -384,15 +469,22 @@
     </scenes>
     <resources>
         <image name="lock.open.fill" catalog="system" width="128" height="112"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="person.fill.checkmark" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

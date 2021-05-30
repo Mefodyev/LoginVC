@@ -9,7 +9,7 @@ import UIKit
 
 class ExperienceViewController: UIViewController {
 
-    let myGithubURL = NSURL(string: "https://github.com/Mefodyev")
+    private let myGithubURL = "https://github.com/Mefodyev"
     
 
     @IBOutlet weak var experienceTextView: UITextView!
@@ -21,13 +21,11 @@ class ExperienceViewController: UIViewController {
 
         setGradientToBackgroundView(view: view, firstColor: .systemIndigo, secondColor: .systemPink)
         experienceTextView.text = user.person.eduAndworkExperience
-        
-        toGithubButton.layer.cornerRadius = toGithubButton.frame.size.height/2
+        setCornerRadiusForButton(button: toGithubButton)
     }
     
     @IBAction func goToGithubButtonTapped(_ sender: Any) {
-        
-        UIApplication.shared.open(myGithubURL! as URL)
+        prepareAndOpenURL(urlString: myGithubURL)
     }
     
 

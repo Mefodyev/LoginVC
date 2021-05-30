@@ -28,7 +28,8 @@ class AboutMeViewController: UIViewController {
 \(user.person.fullName), \(user.person.age)
 \(user.person.hometown)
 """
-        toExperienceButton.layer.cornerRadius = toExperienceButton.frame.size.height/2
-        toHobbiesButton.layer.cornerRadius = toHobbiesButton.frame.size.height/2
+
+        setCornerRadiusForButton(button: toExperienceButton)
+        setCornerRadiusForButton(button: toHobbiesButton)
     }
 }

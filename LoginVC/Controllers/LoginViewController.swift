@@ -21,7 +21,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setGradientToBackgroundView(view: view, firstColor: .systemIndigo, secondColor: .systemBlue)
-        loginButton.layer.cornerRadius = loginButton.frame.size.height/2
+        setCornerRadiusForButton(button: loginButton)
     }
 
     //MARK: Functions and @IBActions

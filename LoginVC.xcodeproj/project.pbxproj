@@ -19,6 +19,7 @@
 		360426D82663D44000F4582A /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360426D72663D44000F4582A /* ExperienceViewController.swift */; };
 		360426DC2663EDCD00F4582A /* HobbiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360426DB2663EDCD00F4582A /* HobbiesViewController.swift */; };
 		360426E12663F3A300F4582A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360426E02663F3A300F4582A /* Extensions.swift */; };
+		360426E5266418C800F4582A /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360426E4266418C800F4582A /* ContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		360426D72663D44000F4582A /* ExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
 		360426DB2663EDCD00F4582A /* HobbiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesViewController.swift; sourceTree = "<group>"; };
 		360426E02663F3A300F4582A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		360426E4266418C800F4582A /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				360426D32663C59900F4582A /* AboutMeViewController.swift */,
 				360426D72663D44000F4582A /* ExperienceViewController.swift */,
 				360426DB2663EDCD00F4582A /* HobbiesViewController.swift */,
+				360426E4266418C800F4582A /* ContactsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				360426CD2663C2DA00F4582A /* UserModel.swift in Sources */,
 				360426D42663C59900F4582A /* AboutMeViewController.swift in Sources */,
 				360426B0265D881200F4582A /* SceneDelegate.swift in Sources */,
+				360426E5266418C800F4582A /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
