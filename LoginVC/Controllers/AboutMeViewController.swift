@@ -9,13 +9,14 @@ import UIKit
 
 class AboutMeViewController: UIViewController {
 
+    //MARK: Outlets
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userInfoLabel: UILabel!
     @IBOutlet weak var toExperienceButton: UIButton!
     @IBOutlet weak var toHobbiesButton: UIButton!
     
     
-    
+    //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 

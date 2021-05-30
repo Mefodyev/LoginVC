@@ -9,16 +9,17 @@ import UIKit
 
 class ContactsViewController: UIViewController {
 
+    //MARK: Constants and Variables
     private let myTelegram = "https://t.me/mefodyev"
     private let myInstagram = "https://www.instagram.com/mefodyev/"
     private let myHh = "https://hh.ru/resume/b72e1aa8ff064de1510039ed1f45797145746d"
 
-
+    //MARK: Outlets
     @IBOutlet weak var telegramButton: UIButton!
     @IBOutlet weak var instagramButton: UIButton!
     @IBOutlet weak var hhButton: UIButton!
 
-    
+    //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +29,7 @@ class ContactsViewController: UIViewController {
         setGradientToBackgroundView(view: view, firstColor: .systemIndigo, secondColor: .purple)
     }
     
+    //MARK: Actions
     @IBAction func telegramButtonTapped(_ sender: Any) {
         prepareAndOpenURL(urlString: myTelegram)
     }

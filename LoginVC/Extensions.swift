@@ -25,7 +25,6 @@ extension UIViewController {
     //MARK: Network Extensions
     func prepareAndOpenURL(urlString: String) {
         let urlToCheck = NSURL(string: urlString)
-        
         guard let urlToOpen = urlToCheck else {
             print("URL not found")
             return
