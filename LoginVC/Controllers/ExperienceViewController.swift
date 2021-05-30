@@ -9,6 +9,8 @@ import UIKit
 
 class ExperienceViewController: UIViewController {
 
+    let myGithubURL = NSURL(string: "https://github.com/Mefodyev")
+    
 
     @IBOutlet weak var experienceTextView: UITextView!
     @IBOutlet weak var toGithubButton: UIButton!
@@ -21,6 +23,11 @@ class ExperienceViewController: UIViewController {
         experienceTextView.text = user.person.eduAndworkExperience
         
         toGithubButton.layer.cornerRadius = toGithubButton.frame.size.height/2
+    }
+    
+    @IBAction func goToGithubButtonTapped(_ sender: Any) {
+        
+        UIApplication.shared.open(myGithubURL! as URL)
     }
     
 
