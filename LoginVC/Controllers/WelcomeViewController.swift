@@ -8,29 +8,20 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    
+    //MARK: Variables and Constants
     var username = ""
     
+    //MARK: Outlets
     @IBOutlet weak var helloUserLabel: UILabel!
     @IBOutlet weak var logoutButton: UIButton!
     
+    //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setGradientToBackgroundView()
+        setGradientToBackgroundView(view: view, firstColor: .systemPink, secondColor: .systemBlue)
         helloUserLabel.text = "Welcome, \(username)!"
         logoutButton.layer.cornerRadius = logoutButton.frame.size.height/2
         
     }
-    
-    
-    private func setGradientToBackgroundView() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.systemPink.cgColor, UIColor.systemBlue.cgColor]
-        gradientLayer.frame = view.bounds
-        view.layer.insertSublayer(gradientLayer, at: 0)
-    }
-
-
-
 }

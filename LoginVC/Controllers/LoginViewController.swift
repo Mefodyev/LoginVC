@@ -8,10 +8,8 @@
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-    
-    let validUsername = "User"
-    let validPassword = "Password"
 
+    //MARK: Outlets
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -19,20 +17,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
     
+    //MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setGradientToBackgroundView(view: view, firstColor: .systemIndigo, secondColor: .systemBlue)
         loginButton.layer.cornerRadius = loginButton.frame.size.height/2
     }
 
+    //MARK: Functions and @IBActions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
     private func userDataChecker() -> Bool {
-        userNameTextField.text == validUsername && passwordTextField.text == validPassword
+        userNameTextField.text == user.userName && passwordTextField.text == user.password
     }
-    
     
     @IBAction func forgotUsernameButtonTouched(_ sender: Any) {
         forgotUsernameAlert()
@@ -43,14 +42,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func forgotUsernameAlert() {
-        let ac = UIAlertController(title: "Oops!", message: "Your name is \(validUsername) 😉", preferredStyle: .alert)
+        let ac = UIAlertController(title: "Oops!", message: "Your name is \(user.userName) 😉", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil )
         ac.addAction(okAction)
         self.present(ac, animated: true, completion: nil)
     }
     
     private func forgotPasswordAlert() {
-        let ac = UIAlertController(title: "Oops!", message: "Your password is \(validPassword) 😉", preferredStyle: .alert)
+        let ac = UIAlertController(title: "Oops!", message: "Your password is \(user.password) 😉", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil )
         ac.addAction(okAction)
         self.present(ac, animated: true, completion: nil)
@@ -63,15 +62,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.present(ac, animated: true, completion: nil)
         userNameTextField.text = ""
         passwordTextField.text = ""
+        print("User entered wrong data")
     }
-
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard userDataChecker() == true else {
             return wrongUserData()
         }
-        guard let destination = segue.destination as? WelcomeViewController else { return }
-        destination.username = userNameTextField.text ?? ""
+        
+        let tabBarController = segue.destination as! UITabBarController
+        
+        for vc in tabBarController.viewControllers! {
+            if let welcomeVC = vc as? WelcomeViewController {
+                welcomeVC.username = user.person.fullName
+            } else if let navigationVC = vc as? UINavigationController {
+                let aboutMeVC = navigationVC.topViewController as! AboutMeViewController
+                aboutMeVC.title = "About Me 🤗"
+            }
+        }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -90,9 +98,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             textField.returnKeyType = .done
             performSegue(withIdentifier: "toWelcomeVC", sender: nil)
         }
-        
         return true
     }
-    
 }
 
