@@ -9,9 +9,6 @@ import UIKit
 
 class ExperienceViewController: UIViewController {
 
-    //MARK: Constants and Variables
-    private let myGithubURL = "https://github.com/Mefodyev"
-
     //MARK: Outlets
     @IBOutlet weak var experienceTextView: UITextView!
     @IBOutlet weak var toGithubButton: UIButton!
@@ -27,10 +24,6 @@ class ExperienceViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func goToGithubButtonTapped(_ sender: Any) {
-        prepareAndOpenURL(urlString: myGithubURL)
+        prepareAndOpenURL(urlString: user.person.linksToContact["Github"] ?? "")
     }
-    
-
-
-
 }

@@ -9,11 +9,6 @@ import UIKit
 
 class ContactsViewController: UIViewController {
 
-    //MARK: Constants and Variables
-    private let myTelegram = "https://t.me/mefodyev"
-    private let myInstagram = "https://www.instagram.com/mefodyev/"
-    private let myHh = "https://hh.ru/resume/b72e1aa8ff064de1510039ed1f45797145746d"
-
     //MARK: Outlets
     @IBOutlet weak var telegramButton: UIButton!
     @IBOutlet weak var instagramButton: UIButton!
@@ -31,15 +26,15 @@ class ContactsViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func telegramButtonTapped(_ sender: Any) {
-        prepareAndOpenURL(urlString: myTelegram)
+        prepareAndOpenURL(urlString: user.person.linksToContact["Telegram"] ?? "")
     }
     
     @IBAction func instagramButtonTapped(_ sender: Any) {
-        prepareAndOpenURL(urlString: myInstagram)
+        prepareAndOpenURL(urlString: user.person.linksToContact["Instagram"] ?? "")
     }
     
     @IBAction func hhButtonTapped(_ sender: Any) {
-        prepareAndOpenURL(urlString: myHh)
+        prepareAndOpenURL(urlString: user.person.linksToContact["HeadHunter"] ?? "")
     }
     
 }

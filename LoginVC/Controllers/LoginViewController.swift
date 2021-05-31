@@ -42,24 +42,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func forgotUsernameAlert() {
-        let ac = UIAlertController(title: "Oops!", message: "Your name is \(user.userName) 😉", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil )
-        ac.addAction(okAction)
-        self.present(ac, animated: true, completion: nil)
+        showAlert(title: "Oops!", message: "Your name is \(user.userName) 😉", titleForOK: "OK")
     }
     
     private func forgotPasswordAlert() {
-        let ac = UIAlertController(title: "Oops!", message: "Your password is \(user.password) 😉", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil )
-        ac.addAction(okAction)
-        self.present(ac, animated: true, completion: nil)
+        showAlert(title: "Oops!", message: "Your password is \(user.password) 😉", titleForOK: "OK")
     }
     
     private func wrongUserData() {
-        let ac = UIAlertController(title: "Invalid Login or Password", message: "Please enter Correct User Data", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil )
-        ac.addAction(okAction)
-        self.present(ac, animated: true, completion: nil)
+        showAlert(title: "Invalid Login or Password", message: "Please enter Correct User Data", titleForOK: "OK")
         userNameTextField.text = ""
         passwordTextField.text = ""
         print("User entered wrong data")

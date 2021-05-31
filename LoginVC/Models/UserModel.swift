@@ -21,8 +21,8 @@ struct Person {
     let age: Int
     let hometown: String
     let hobbies: String
-    let eduAndworkExperience: String
-    
+    let eduAndworkExperience: String    
+    let linksToContact: [String : String]
     
 }
 let person = Person(
@@ -57,7 +57,12 @@ let person = Person(
 2020 - по наст. время: Работа техническим аналитиком в компании ООО "КРОК Инкорпорейтед"
 
 Начиная с 2020 г. интересуюсь iOS разработкой, имею желание работать на начальной позиции или пройти стажировку в любом направлении, связанной с iOS разработкой. Перейдя по кнопке ниже вы сможете просмотреть актуальные примеры кода.
-""")
+""",
+    linksToContact:
+        ["Github" : "https://github.com/Mefodyev",
+         "Telegram" : "https://t.me/mefodyev",
+         "Instagram" : "https://www.instagram.com/mefodyev/",
+         "HeadHunter" : "https://hh.ru/resume/b72e1aa8ff064de1510039ed1f45797145746d"])
 
 let user = User(userName: "User", password: "Password", person: person)
 

@@ -22,6 +22,14 @@ extension UIViewController {
         button.layer.cornerRadius = button.frame.size.height/2
     }
     
+    //MARK: UIAlertController Extensions
+    func showAlert(title: String, message: String, titleForOK: String) {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: titleForOK, style: .default, handler: nil )
+        ac.addAction(okAction)
+        self.present(ac, animated: true, completion: nil)
+    }
+    
     //MARK: Network Extensions
     func prepareAndOpenURL(urlString: String) {
         let urlToCheck = NSURL(string: urlString)
